@@ -3,7 +3,7 @@ let audioBuffer;
 
 async function loadAudio() {
   try {
-    const response = await fetch("blues.00081.wav");
+    const response = await fetch("blues.00081.wav"); 
     const arrayBuffer = await response.arrayBuffer();
     audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
   } catch (error) {
@@ -21,7 +21,13 @@ function playAudio() {
 }
 
 loadAudio();
-
 document.getElementById("playButton").addEventListener("click", () => {
-  playAudio();
+  if (audioContext.state === 'suspended') {
+    audioContext.resume().then(() => {
+      console.log('AudioContext resumed');
+      playAudio(); 
+    });
+  } else {
+    playAudio(); 
+  }
 });
