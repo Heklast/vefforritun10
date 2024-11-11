@@ -1,8 +1,26 @@
 body {
   background-color: rgb(249 72 167);
+  max-width: 100%;
+}
+
+html {
+  max-width: 100%;
 }
 
 h1,
 p {
   color: rgb(93 2 93);
+}
+
+button {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #ffc0cb;
+  color: #800080;
+  border-radius: 10px;
+  width: 100%;
+}
+
+canvas {
+  background-color: #eee;
 }
