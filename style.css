@@ -1,6 +1,11 @@
 body {
   background-color: rgb(249 72 167);
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  margin: 0;
 }
 
 html {
@@ -10,6 +15,7 @@ html {
 h1,
 p {
   color: rgb(93 2 93);
+  text-align: center;
 }
 
 button {
@@ -23,4 +29,5 @@ button {
 
 canvas {
   background-color: #eee;
+  
 }

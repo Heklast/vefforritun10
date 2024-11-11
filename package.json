@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint key_mouse.js sound.js",
+    "lint": "eslint key_mouse.js",
     "stylelint": "stylelint style.css"
   },
   "devDependencies": {

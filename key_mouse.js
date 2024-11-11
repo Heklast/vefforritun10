@@ -4,12 +4,13 @@ var pressedMouse = false;
 var x;
 var y;
 var colorLine ="pink";
-var key = {C: 67};
+var key = {Spacebar: 32};
 
 document.addEventListener("mousedown", startDrawing);
 document.addEventListener("mousemove", drawLine);
 document.addEventListener("mouseup", stopDrawing);
 document.addEventListener("keydown", clearCanvas);
+document.addEventListener("dblclick", changeColor);
 
 function startDrawing(eventvs01){
 	pressedMouse = true;
@@ -34,9 +35,15 @@ function stopDrawing() {
 }
 
 function clearCanvas(whenPressKey) {
-	if (whenPressKey.keyCode == key.C) {
+	if (whenPressKey.keyCode == key.Spacebar ) {
 		paper.clearRect(0, 0, square.width, square.height);
 	}
+}
+
+function changeColor(event){
+    if(event.type === "dblclick"){
+        colorLine="blue";
+    }
 }
 
 drawing_line("#FF6347", x-1, y, x, y, paper);
